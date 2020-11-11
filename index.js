@@ -8,7 +8,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What is the name of your project?',
+            message: 'What is the name of your project? (Required)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -21,7 +21,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'githubUsername',
-            message: 'What is your Github username?',
+            message: 'What is your Github username? (Required)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -34,7 +34,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'email',
-            message: 'What is your email address?',
+            message: 'What is your email address? (Required)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -47,7 +47,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'description',
-            message: 'Enter a description of your project:',
+            message: 'Enter a description of your project: (Required)',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -68,19 +68,19 @@ const promptUser = () => {
             message: 'Provide instructions and examples of usage:',
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
             message: 'Select the license type for your project:',
             choices: [
                 'None',
-                'Apache License 2.0',
-                'MIT License',
-                'BSD 2-Clause "Simplified" License',
-                'BSD 3-Clause "New" or "Revised" License',
-                'Boost Software License 1.0',
+                'Apache 2.0',
+                'MIT',
+                'BSD 2-Clause "Simplified"',
+                'BSD 3-Clause "New" or "Revised"',
+                'Boost Software 1.0',
                 'Creative Commons Zero v1.0 Universal',
                 'Eclipse Public License 2.0',
-                'GNU Affero General Public License v3.0',
+                'GNU Affero General Public v3.0',
                 'GNU General Public License v2.0',
                 'GNU General Public License v3.0',
                 'GNU Lesser General Public License v2.1',
