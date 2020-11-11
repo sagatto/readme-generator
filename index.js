@@ -106,13 +106,13 @@ function writeToFile(fileContent) {
     fs.writeFile('./dist/README.md', fileContent, err => {
         if (err) return console.log(err);
         console.log('Success! File created!');
-      });
+    });
 }
 
 promptUser()
     .then(enteredData => {
         return generateMarkdown(enteredData);
     })
-.then(pageHTML => {
-    return writeToFile(pageHTML);
+    .then(pageHTML => {
+        return writeToFile(pageHTML);
 });
