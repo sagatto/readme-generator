@@ -88,9 +88,9 @@ const licenseDescriptionHandler = licenseChoice => {
   }
 }
 
-// function to generate markdown for README
+// function to generate README.md
 function generateMarkdown(data) {
-  return `# ${data.title}   ${licenseBadgeHandler(data.license)}
+  return `# ${data.title}
 ## Description
 ${data.description}
 ## Table of Contents
